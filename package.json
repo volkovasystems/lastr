@@ -1,0 +1,46 @@
+{
+  "name": "lastr",
+  "version": "0.0.0",
+  "description": "Get the last non-falsy element of array.",
+  "main": "lastr.js",
+  "support": "lastr.support.js",
+  "deploy": "lastr.deploy.js",
+  "browser": "lastr.deploy.js",
+  "scripts": {
+    "build": "babel lastr.js --out-file lastr.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha lastr-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/lastr.git"
+  },
+  "keywords": [
+    "get",
+    "last",
+    "non-falsy",
+    "element",
+    "of",
+    "array",
+    "lastr"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/lastr/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/lastr#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "falzy": "^0.20.0",
+    "raze": "^0.32.0",
+    "truly": "^0.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^3.1.0"
+  }
+}
