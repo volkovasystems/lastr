@@ -1,33 +1,35 @@
 {
-  "name": "lastr",
-  "version": "0.0.0",
-  "description": "Get the last non-falsy element of array.",
-  "main": "lastr.deploy.js",
-  "support": "lastr.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "get",
-    "last",
-    "non-falsy",
-    "element",
-    "of",
-    "array",
-    "lastr"
-  ],
-  "homepage": "https://github.com/volkovasystems/lastr",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "raze": "^0.32.0",
-    "truly": "^0.19.0"
-  }
+	"name": "lastr",
+	"version": "0.1.0",
+	"description": "Get the last non-falsy element of array.",
+	"main": "lastr.deploy.js",
+	"support": "lastr.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"get",
+		"last",
+		"non-falsy",
+		"element",
+		"of",
+		"array",
+		"lastr"
+	],
+	"homepage": "https://github.com/volkovasystems/lastr",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"falzy": "^0.23.0",
+		"raze": "^0.34.0",
+		"truly": "^0.20.0"
+	}
 }
