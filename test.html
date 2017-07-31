@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>lastr unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:lastr</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./lastr.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "lastr unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( lastr( [ 1, 2, 3 ] ), 3, "should return 3" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( lastr( [ false, true ] ), true, "should return true" );
-
-				let object = { };
-				assert.equal( lastr( [ "", "yeah", object, null ] ), object, "should return empty object" );
-
-				assert.equal( lastr( [ null, undefined, 2 ] ), 2, "should return 2" );
-
-				assert.equal( lastr( [ null, Symbol.for( "hello" ), true ] ), true, "should return true" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
