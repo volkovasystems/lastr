@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "lastr", ( ) => {
-	
+
 	describe( `"lastr( [ 1, 2, 3 ] )"`, ( ) => {
 		it( "should return 3", ( ) => {
 
@@ -92,12 +92,12 @@ describe( "lastr", ( ) => {
 	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
 		it( "should return empty object" , ( ) => {
 
-			let object = { };	
-			assert.equal( lastr( [ "", "yeah", object, null ] ), object);
+			let object = { };
+			assert.deepEqual( lastr( [ "", "yeah", object, null ] ), object);
 
 		} );
 	} );
-	
+
 
 	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
 		it( "should return 2", ( ) => {
@@ -114,16 +114,17 @@ describe( "lastr", ( ) => {
 
 		} );
 	} );
+
 } );
 
 
 //: @end-server
 
 
-//: @client: 
+//: @client:
 
 describe( "lastr", ( ) => {
-	
+
 	describe( `"lastr( [ 1, 2, 3 ] )"`, ( ) => {
 		it( "should return 3", ( ) => {
 
@@ -143,12 +144,12 @@ describe( "lastr", ( ) => {
 	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
 		it( "should return empty object" , ( ) => {
 
-			let object = { };	
-			assert.equal( lastr( [ "", "yeah", object, null ] ), object);
+			let object = { };
+			assert.deepEqual( lastr( [ "", "yeah", object, null ] ), object );
 
 		} );
 	} );
-	
+
 
 	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
 		it( "should return 2", ( ) => {
@@ -165,6 +166,7 @@ describe( "lastr", ( ) => {
 
 		} );
 	} );
+
 } );
 
 //: @end-client
@@ -174,15 +176,20 @@ describe( "lastr", ( ) => {
 
 describe( "lastr", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( `"lastr( [ 1, 2, 3 ] )"`, ( ) => {
 		it( "should return 3", ( ) => {
 
-		assert.equal(lastr ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return lastr( [ 1, 2, 3 ] );
+				}
+
+			).value;
+
+			assert.equal( result, 3 );
 
 		} );
 	} );
@@ -190,40 +197,59 @@ describe( "lastr", ( ) => {
 	describe( `"lastr( [ false, true ] )"`, ( ) => {
 		it( "should return true", ( ) => {
 
-		assert.equal(lastr ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					return lastr( [ false, true ] );
+				}
+			).value;
+
+			assert.equal( result, true );
 
 		} );
 	} );
 
 	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
 		it( "should return empty object" , ( ) => {
-
-			let object = { };	
-		assert.equal(lastr ( true, true ) );
-
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					let object = { };
+					return JSON.stringify( lastr( [ "", "yeah", object, null ] ) );
+				}
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), { } );
 		} );
 	} );
-	
 
 	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
 		it( "should return 2", ( ) => {
 
-		assert.equal(lastr ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					return lastr( [ null, undefined, 2 ] );
+				}
+			).value;
+
+			assert.equal( result, 2 );
 
 		} );
 	} );
 
-	describe( `"lastr( [ null, Symbol.for( "hello" )"`, ( ) => {
+	describe( `"lastr( [ null, Symbol.for( "hello" ) ] )"`, ( ) => {
 		it( "should return true" , ( ) => {
-
-		assert.equal(lastr ( true, true ) );
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					return lastr( [ null, Symbol.for( "hello" ), true ] );
+				}
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
 
 		} );
 	} );
 
-	
-	
 } );
 
 //: @end-bridge
-
