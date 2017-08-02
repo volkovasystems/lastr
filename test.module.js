@@ -194,6 +194,7 @@ describe( "lastr", ( ) => {
 		} );
 	} );
 
+
 	describe( `"lastr( [ false, true ] )"`, ( ) => {
 		it( "should return true", ( ) => {
 
@@ -207,6 +208,7 @@ describe( "lastr", ( ) => {
 
 		} );
 	} );
+
 
 	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
 		it( "should return empty object" , ( ) => {
@@ -222,6 +224,7 @@ describe( "lastr", ( ) => {
 		} );
 	} );
 
+
 	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
 		it( "should return 2", ( ) => {
 
@@ -235,6 +238,7 @@ describe( "lastr", ( ) => {
 
 		} );
 	} );
+
 
 	describe( `"lastr( [ null, Symbol.for( "hello" ) ] )"`, ( ) => {
 		it( "should return true" , ( ) => {
