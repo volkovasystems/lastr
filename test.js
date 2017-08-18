@@ -68,7 +68,7 @@ const lastr = require( "./lastr.js" );
 //: @server:
 
 describe( "lastr", ( ) => {
-	
+
 	describe( `"lastr( [ 1, 2, 3 ] )"`, ( ) => {
 		it( "should return 3", ( ) => {
 
@@ -88,12 +88,12 @@ describe( "lastr", ( ) => {
 	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
 		it( "should return empty object" , ( ) => {
 
-			let object = { };	
-			assert.equal( lastr( [ "", "yeah", object, null ] ), object);
+			let object = { };
+			assert.deepEqual( lastr( [ "", "yeah", object, null ] ), object);
 
 		} );
 	} );
-	
+
 
 	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
 		it( "should return 2", ( ) => {
@@ -110,11 +110,11 @@ describe( "lastr", ( ) => {
 
 		} );
 	} );
+
 } );
 
 
 //: @end-server
-
 
 
 

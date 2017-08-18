@@ -5,15 +5,15 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-31T12:07:17.113Z",
-    "end": "2017-07-31T12:07:17.122Z",
-    "duration": 9
+    "start": "2017-08-18T01:14:38.039Z",
+    "end": "2017-08-18T01:14:38.049Z",
+    "duration": 10
   },
   "tests": [
     {
       "title": "should return 3",
       "fullTitle": "lastr \"lastr( [ 1, 2, 3 ] )\" should return 3",
-      "duration": 2,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -27,7 +27,7 @@
     {
       "title": "should return empty object",
       "fullTitle": "lastr \"lastr( [ \"\", \"yeah\", object, null ] )\" should return empty object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -52,7 +52,7 @@
     {
       "title": "should return 3",
       "fullTitle": "lastr \"lastr( [ 1, 2, 3 ] )\" should return 3",
-      "duration": 2,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -66,7 +66,7 @@
     {
       "title": "should return empty object",
       "fullTitle": "lastr \"lastr( [ \"\", \"yeah\", object, null ] )\" should return empty object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
