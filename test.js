@@ -69,24 +69,24 @@ const lastr = require( "./lastr.js" );
 
 describe( "lastr", ( ) => {
 
-	describe( `"lastr( [ 1, 2, 3 ] )"`, ( ) => {
-		it( "should return 3", ( ) => {
+	describe( "`lastr( [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to 3", ( ) => {
 
 			assert.equal( lastr( [ 1, 2, 3 ] ), 3 );
 
 		} );
 	} );
 
-	describe( `"lastr( [ false, true ] )"`, ( ) => {
-		it( "should return true", ( ) => {
+	describe( "`lastr( [ false, true ] )`", ( ) => {
+		it( "should be equal to true", ( ) => {
 
 			assert.equal( lastr( [ false, true ] ), true );
 
 		} );
 	} );
 
-	describe( `"lastr( [ "", "yeah", object, null ] )"`, ( ) => {
-		it( "should return empty object" , ( ) => {
+	describe( "`lastr( [ '', 'yeah', object, null ] )`", ( ) => {
+		it( "should be equal to empty object" , ( ) => {
 
 			let object = { };
 			assert.deepEqual( lastr( [ "", "yeah", object, null ] ), object);
@@ -95,16 +95,16 @@ describe( "lastr", ( ) => {
 	} );
 
 
-	describe( `"lastr( [ null, undefined, 2 ] )"`, ( ) => {
-		it( "should return 2", ( ) => {
+	describe( "`lastr( [ null, undefined, 2 ] )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
 
 			assert.equal( lastr( [ null, undefined, 2 ] ), 2 );
 
 		} );
 	} );
 
-	describe( `"lastr( [ null, Symbol.for( "hello" )"`, ( ) => {
-		it( "should return true" , ( ) => {
+	describe( "`lastr( [ null, Symbol.for( 'hello' )`", ( ) => {
+		it( "should be equal to true" , ( ) => {
 
 			assert.equal( lastr( [ null, Symbol.for( "hello" ), true ] ), true );
 

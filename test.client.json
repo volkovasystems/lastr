@@ -1,0 +1,212 @@
+{
+	"state": {
+		"passed": 5,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-23T10:36:57.155Z",
+	"end": "2017-08-23T10:37:35.473Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "lastr",
+			"duration": 0,
+			"start": "2017-08-23T10:37:35.054Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "lastr",
+			"duration": 241,
+			"start": "2017-08-23T10:37:35.055Z",
+			"end": "2017-08-23T10:37:35.296Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-23T10:37:35.056Z",
+					"end": "2017-08-23T10:37:35.057Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to 3"
+				},
+				{
+					"start": "2017-08-23T10:37:35.146Z",
+					"end": "2017-08-23T10:37:35.146Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to 3"
+				},
+				{
+					"start": "2017-08-23T10:37:35.147Z",
+					"end": "2017-08-23T10:37:35.147Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-23T10:37:35.190Z",
+					"end": "2017-08-23T10:37:35.191Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-23T10:37:35.191Z",
+					"end": "2017-08-23T10:37:35.191Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to empty object"
+				},
+				{
+					"start": "2017-08-23T10:37:35.227Z",
+					"end": "2017-08-23T10:37:35.227Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to empty object"
+				},
+				{
+					"start": "2017-08-23T10:37:35.228Z",
+					"end": "2017-08-23T10:37:35.228Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to 2"
+				},
+				{
+					"start": "2017-08-23T10:37:35.262Z",
+					"end": "2017-08-23T10:37:35.262Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to 2"
+				},
+				{
+					"start": "2017-08-23T10:37:35.263Z",
+					"end": "2017-08-23T10:37:35.263Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-23T10:37:35.296Z",
+					"end": "2017-08-23T10:37:35.296Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "lastr",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-23T10:37:35.296Z",
+					"end": "2017-08-23T10:37:35.297Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "lastr"
+				}
+			]
+		},
+		{
+			"name": "`lastr( [ 1, 2, 3 ] )`",
+			"duration": 91,
+			"start": "2017-08-23T10:37:35.055Z",
+			"end": "2017-08-23T10:37:35.146Z",
+			"tests": [
+				{
+					"name": "should be equal to 3",
+					"start": "2017-08-23T10:37:35.056Z",
+					"end": "2017-08-23T10:37:35.145Z",
+					"duration": 89,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`lastr( [ false, true ] )`",
+			"duration": 45,
+			"start": "2017-08-23T10:37:35.146Z",
+			"end": "2017-08-23T10:37:35.191Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-23T10:37:35.147Z",
+					"end": "2017-08-23T10:37:35.190Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`lastr( [ '', 'yeah', object, null ] )`",
+			"duration": 37,
+			"start": "2017-08-23T10:37:35.191Z",
+			"end": "2017-08-23T10:37:35.228Z",
+			"tests": [
+				{
+					"name": "should be equal to empty object",
+					"start": "2017-08-23T10:37:35.191Z",
+					"end": "2017-08-23T10:37:35.227Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`lastr( [ null, undefined, 2 ] )`",
+			"duration": 34,
+			"start": "2017-08-23T10:37:35.228Z",
+			"end": "2017-08-23T10:37:35.262Z",
+			"tests": [
+				{
+					"name": "should be equal to 2",
+					"start": "2017-08-23T10:37:35.228Z",
+					"end": "2017-08-23T10:37:35.262Z",
+					"duration": 34,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`lastr( [ null, Symbol.for( 'hello' ) ] )`",
+			"duration": 34,
+			"start": "2017-08-23T10:37:35.262Z",
+			"end": "2017-08-23T10:37:35.296Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-23T10:37:35.262Z",
+					"end": "2017-08-23T10:37:35.296Z",
+					"duration": 34,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
